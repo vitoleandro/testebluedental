@@ -1,0 +1,13 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form">
+  <label for="name">Nome</label>
+  <input type="text" name="name" [(ngModel)]="medical.name">
+  <label for="name">Clinica</label>
+  <input type="text" name="clinic" [(ngModel)]="medical.clinic">
+  <label for="name">Horário</label>
+  <label class="checkbox" *ngFor="let c of schedule; let i = index">
+    <input type="checkbox" name="shedule" value="c" (change)="onChange(c, $event, i)">
+    {{ c }}
+  </label>
+
+  <input type="submit" value="salvar">
+</form>

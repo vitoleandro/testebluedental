@@ -1,0 +1,9 @@
+<h4 class="title-page">Cadastro de Médicos</h4>
+
+<ul class="nav-form">
+  <li (click)="showForm('matriz')" class="{{statusMatriz}}">Cadastro Matriz</li>
+  <li (click)="showForm('filial')" class="{{statusFilial}}">Cadastro Filial</li>
+</ul>
+
+<cadastro-matriz *ngIf="formMatriz" #formMatriz></cadastro-matriz>
+<cadastro-filial *ngIf="formFilial" #formMatriz></cadastro-filial>

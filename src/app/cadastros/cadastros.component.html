@@ -1,0 +1,21 @@
+<h4 class="title-page">Dentistas</h4>
+<a href="/cadastroDentista" class="btn-new">Novo Cadastro</a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Clinica</th>
+      <th>Horário</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let medical of medicals | async">
+      <td>{{ medical.name }}</td>
+      <td>{{ medical.clinic }}</td>
+      <td>
+        <span *ngFor="let s of medical.shedule">{{s}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

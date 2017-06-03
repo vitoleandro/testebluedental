@@ -1,4 +1,12 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<header class="header-main">
+  <h1>TEST FRONT END - BLUEDENTAL</h1>
+  <ul class="header-menu">
+    <li><a routerLink="dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li><a routerLink="cadastros" routerLinkActive="active">Cadastro denstista</a></li>
+    <li><a routerLink="usuarios" routerLinkActive="active">Cadastro usuário</a></li>
+  </ul>
+</header>
+<div class="row">
+  <router-outlet></router-outlet>
+</div>
+
